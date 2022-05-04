@@ -3,6 +3,6 @@ COPY . .
 
 RUN pip install flask flask_cors
 
-EXPOSE 1003
+EXPOSE 5000
 
 CMD ["python","index.py"]
