@@ -2,7 +2,7 @@ FROM maven as build
 WORKDIR /app
 COPY . .
 RUN mvn install
-RUN mvn test
+RUN mvn -B -DskipTests clean package
 
 #jdk
 FROM openjdk:11.0.10-jre
