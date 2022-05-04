@@ -1,7 +1,7 @@
 FROM maven as build
 WORKDIR /app
 COPY . .
-RUN mvn install
+RUN mvn Dmaven.test.failure.ignore=true clean package
 
 #jdk
 FROM openjdk:11.0.10-jre
